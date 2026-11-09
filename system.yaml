@@ -1,0 +1,24 @@
+# Describes the (hypothetical) solar installation and where it is.
+# Everything the energy model needs is here. Change it, rerun, compare.
+
+location:
+  latitude: 40.85          # example: Ovar, Portugal. Any place on Earth works.
+  longitude: -8.62
+  timezone: Europe/Lisbon  # IANA name; used to cut the data into local days
+
+panels:
+  count: 12
+  area_m2: 1.7             # area of ONE panel
+  efficiency: 0.20         # fraction, 0.20 = 20 %
+  temp_coefficient: -0.0035  # power change per degree C above 25 C (typical silicon)
+
+orientation:
+  tilt_deg: 35             # 0 = flat, 90 = vertical
+  azimuth_deg: 180         # compass direction the panels face: 180 = south, 0 = north.
+                           # In the southern hemisphere you normally face north (0).
+
+losses: 0.14               # wiring, inverter, dirt, mismatch: 14 % is a common rule of thumb
+inverter_kw: null          # optional cap on AC output, e.g. 3.0. null = no cap
+
+weather:
+  model: null              # null = Open-Meteo picks the best model. Or e.g. era5

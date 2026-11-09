@@ -1,0 +1,5 @@
+data/*.csv
+data/raw/
+__pycache__/
+.venv/
+.pytest_cache/

@@ -1,0 +1,9 @@
+# Works on Python 3.10 to 3.13. Independent of the old requirements.txt in the repo root.
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.4
+pvlib>=0.11
+requests>=2.31
+pyyaml>=6.0
+matplotlib>=3.8
+pytest>=8.0
